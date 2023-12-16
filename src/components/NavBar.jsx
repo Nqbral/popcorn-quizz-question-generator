@@ -15,7 +15,7 @@ export default function NavBar() {
             </Link>
             <Link to="/">
                 <span className="text-red-600">Popcorn</span>{' '}
-                <span className="text-yellow-500">quizz</span>
+                <span className="text-yellow-500">quizz</span> generator
             </Link>
         </nav>
     );

@@ -1,6 +1,6 @@
 import logo from '../assets/images/logo.png';
 import Card from '../components/Card';
-import LinkPrimaryButton from '../components/LinkPrimaryButton';
+import LinkButton from '../components/LinkButton';
 import NavBar from '../components/NavBar';
 
 export default function HomePage() {
@@ -27,18 +27,18 @@ export default function HomePage() {
                     </h2>
                 </div>
                 <Card>
-                    <LinkPrimaryButton
-                        linkTo={'/as'}
+                    <LinkButton
+                        linkTo={'/choose-type-theme-question'}
                         buttonText={'Créer une question'}
-                    ></LinkPrimaryButton>
-                    <LinkPrimaryButton
+                    ></LinkButton>
+                    <LinkButton
                         linkTo={'/as'}
                         buttonText={'Consulter les questions'}
-                    ></LinkPrimaryButton>
-                    <LinkPrimaryButton
+                    ></LinkButton>
+                    <LinkButton
                         linkTo={'/as'}
                         buttonText={'Modérer les questions'}
-                    ></LinkPrimaryButton>
+                    ></LinkButton>
                 </Card>
             </section>
         </>
