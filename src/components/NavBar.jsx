@@ -1,17 +1,21 @@
 import { Link } from 'react-router-dom';
 
 import logo from '../assets/images/logo.png';
-import './NavBar.css';
 
 export default function NavBar() {
     return (
-        <nav className="flex flex-row justify-between p-2 align-middle shadow-md">
+        <nav className="fixed top-0 flex w-screen flex-row items-center justify-between p-3 shadow-md shadow-neutral-900">
             <Link to="/">
-                <img src={logo} alt="popcorn-logo" id="logo-nav" />
+                <img
+                    src={logo}
+                    alt="popcorn-logo"
+                    id="logo-nav"
+                    className="h-8"
+                />
             </Link>
             <Link to="/">
-                <span className="accent-color">Popcorn</span>{' '}
-                <span className="primary-color">quizz</span>
+                <span className="text-red-600">Popcorn</span>{' '}
+                <span className="text-yellow-500">quizz</span>
             </Link>
         </nav>
     );

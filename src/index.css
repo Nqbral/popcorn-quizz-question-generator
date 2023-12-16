@@ -10,15 +10,50 @@ body {
     color: #ffffff;
 }
 
-/* Colors */
-.primary-color {
-    color: #f44336;
+.card {
+    width: 80vw;
 }
 
-.accent-color {
-    color: #ffc107;
+@media (width > 1024px) {
+    .card {
+        width: 65vw;
+    }
 }
 
-.light-grey {
-    color: #c6c6c6;
+@media (width > 1440px) {
+    .card {
+        width: 50vw;
+    }
+}
+
+/* Headings */
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+/* Buttons */
+.button {
+    min-width: 30vw;
+}
+
+@media (width > 768px) {
+    .button {
+        min-width: 25vw;
+    }
+}
+
+@media (width > 1024px) {
+    .button {
+        min-width: 20vw;
+    }
+}
+
+@media (width > 1444px) {
+    .button {
+        min-width: 15vw;
+    }
 }
