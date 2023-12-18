@@ -70,6 +70,8 @@ export default function CreateQuestion() {
                         ''
                     )}
 
+                    <hr className="my-10 w-64" />
+
                     <EmojiStatements />
 
                     <div className="mt-8 flex flex-row gap-2">
