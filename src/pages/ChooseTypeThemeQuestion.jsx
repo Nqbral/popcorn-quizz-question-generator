@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Card from '../components/Card';
 import LinkButton from '../components/LinkButton';
 import NavBar from '../components/NavBar';
-import PrimaryButton from '../components/PrimaryButton';
 
 export default function ChooseTypeThemeQuestion() {
     const [questionForm, setQuestionForm] = useState({
@@ -22,7 +21,7 @@ export default function ChooseTypeThemeQuestion() {
         <>
             <NavBar />
             <section
-                id="create-question"
+                id="choose-type-theme-question"
                 className="flex h-screen flex-col items-center justify-center"
             >
                 <Card>
@@ -39,6 +38,7 @@ export default function ChooseTypeThemeQuestion() {
                                     onChange={handleChangeForm}
                                     name="theme"
                                     checked={questionForm.theme === 'anime'}
+                                    className="mr-1 accent-yellow-500"
                                 />
                                 Anime
                             </label>
@@ -49,6 +49,7 @@ export default function ChooseTypeThemeQuestion() {
                                     onChange={handleChangeForm}
                                     name="theme"
                                     checked={questionForm.theme === 'movie'}
+                                    className="mr-1 accent-yellow-500"
                                 />
                                 Film
                             </label>
@@ -59,6 +60,7 @@ export default function ChooseTypeThemeQuestion() {
                                     onChange={handleChangeForm}
                                     name="theme"
                                     checked={questionForm.theme === 'serie'}
+                                    className="mr-1 accent-yellow-500"
                                 />
                                 Séries
                             </label>
@@ -72,6 +74,7 @@ export default function ChooseTypeThemeQuestion() {
                                     onChange={handleChangeForm}
                                     name="type"
                                     checked={questionForm.type === 'emoji'}
+                                    className="mr-1 accent-yellow-500"
                                 />
                                 Emojis
                             </label>
@@ -82,6 +85,7 @@ export default function ChooseTypeThemeQuestion() {
                                     onChange={handleChangeForm}
                                     name="type"
                                     checked={questionForm.type === 'image'}
+                                    className="mr-1 accent-yellow-500"
                                     disabled
                                 />
                                 Image
@@ -93,6 +97,7 @@ export default function ChooseTypeThemeQuestion() {
                                     onChange={handleChangeForm}
                                     name="type"
                                     checked={questionForm.type === 'music'}
+                                    className="mr-1 accent-yellow-500"
                                     disabled
                                 />
                                 Musique
@@ -102,10 +107,13 @@ export default function ChooseTypeThemeQuestion() {
                     <div className="mt-8 flex flex-row gap-2">
                         <LinkButton
                             linkTo={'/'}
-                            buttonText={'Retour vers le menu'}
+                            buttonText={'Retour'}
                             primary={false}
                         />
-                        <PrimaryButton buttonText={'Créer la question'} />
+                        <LinkButton
+                            linkTo={`/create-question/${questionForm.theme}/${questionForm.type}`}
+                            buttonText={'Suivant'}
+                        />
                     </div>
                 </Card>
             </section>

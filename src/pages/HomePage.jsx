@@ -30,15 +30,15 @@ export default function HomePage() {
                     <LinkButton
                         linkTo={'/choose-type-theme-question'}
                         buttonText={'Créer une question'}
-                    ></LinkButton>
+                    />
                     <LinkButton
                         linkTo={'/as'}
                         buttonText={'Consulter les questions'}
-                    ></LinkButton>
+                    />
                     <LinkButton
                         linkTo={'/as'}
                         buttonText={'Modérer les questions'}
-                    ></LinkButton>
+                    />
                 </Card>
             </section>
         </>
