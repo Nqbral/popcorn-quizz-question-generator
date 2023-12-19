@@ -4,7 +4,10 @@ import logo from '../assets/images/logo.png';
 
 export default function NavBar() {
     return (
-        <nav className="fixed top-0 flex w-screen flex-row items-center justify-between px-5 py-3 shadow-md shadow-neutral-900">
+        <nav
+            className="fixed top-0 flex w-screen flex-row items-center justify-between px-5 py-3 shadow-md shadow-neutral-900"
+            style={{ backgroundColor: '#3d3c40' }}
+        >
             <Link to="/">
                 <img
                     src={logo}

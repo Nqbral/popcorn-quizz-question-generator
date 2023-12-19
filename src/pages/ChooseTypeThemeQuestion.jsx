@@ -22,7 +22,7 @@ export default function ChooseTypeThemeQuestion() {
             <NavBar />
             <section
                 id="choose-type-theme-question"
-                className="flex h-screen flex-col items-center justify-center"
+                className="flex flex-col items-center justify-center"
             >
                 <Card>
                     <h2 className="text-yellow-500">

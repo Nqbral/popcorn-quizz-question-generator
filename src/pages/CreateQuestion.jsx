@@ -78,6 +78,8 @@ export default function CreateQuestion() {
                 'Content-Type': 'application/json',
             },
         });
+
+        window.location.replace(`/`);
     };
 
     async function getLastIdQuestion() {

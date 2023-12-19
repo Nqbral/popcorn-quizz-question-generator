@@ -9,7 +9,7 @@ export default function HomePage() {
             <NavBar />
             <section
                 id="homepage"
-                className="flex h-screen flex-col items-center justify-center"
+                className="flex flex-col items-center justify-center"
             >
                 <div className="mb-3 flex flex-col items-center">
                     <img
