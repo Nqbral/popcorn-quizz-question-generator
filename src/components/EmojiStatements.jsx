@@ -2,7 +2,7 @@ import EmojiPicker from 'emoji-picker-react';
 import { Theme } from 'emoji-picker-react';
 import { useRef } from 'react';
 
-export default function EmojiStatements() {
+export default function EmojiStatements({ handleSetStatement }) {
     let configPreview = {
         showPreview: false,
     };
@@ -12,6 +12,8 @@ export default function EmojiStatements() {
     const handleAddingEmoji = (emojiData) => {
         refInputEmoji.current.value =
             refInputEmoji.current.value + emojiData.emoji;
+
+        handleSetStatement(refInputEmoji.current.value);
     };
 
     const clearInput = () => {
