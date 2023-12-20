@@ -32,7 +32,7 @@ export default function HomePage() {
                         buttonText={'Créer une question'}
                     />
                     <LinkButton
-                        linkTo={'/as'}
+                        linkTo={'/consult-questions'}
                         buttonText={'Consulter les questions'}
                     />
                     <LinkButton
