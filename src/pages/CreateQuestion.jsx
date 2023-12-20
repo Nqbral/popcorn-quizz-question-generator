@@ -70,7 +70,6 @@ export default function CreateQuestion() {
             name: name,
             statement: statement,
             validated: false,
-            deleted: false,
         };
 
         await axios.post(URL_JSON_SERVER + 'questions', newQuestion, {

@@ -4,6 +4,7 @@ import ChooseTypeThemeQuestion from './pages/ChooseTypeThemeQuestion';
 import ConsultQuestions from './pages/ConsultQuestions';
 import CreateQuestion from './pages/CreateQuestion';
 import HomePage from './pages/HomePage';
+import ModerateQuestion from './pages/ModerateQuestion';
 
 function App() {
     return (
@@ -21,6 +22,10 @@ function App() {
                 <Route
                     path="/consult-questions"
                     element={<ConsultQuestions />}
+                />
+                <Route
+                    path="/moderate-question"
+                    element={<ModerateQuestion />}
                 />
             </Routes>
         </div>

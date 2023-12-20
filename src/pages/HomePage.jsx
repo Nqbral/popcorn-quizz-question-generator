@@ -36,7 +36,7 @@ export default function HomePage() {
                         buttonText={'Consulter les questions'}
                     />
                     <LinkButton
-                        linkTo={'/as'}
+                        linkTo={'/moderate-question'}
                         buttonText={'Modérer les questions'}
                     />
                 </Card>
