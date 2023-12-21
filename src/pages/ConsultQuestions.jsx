@@ -124,7 +124,7 @@ export default function ConsultQuestions() {
                                     checked={filters.type.includes('emoji')}
                                     onChange={handleChangeForm}
                                 />
-                                <label htmlFor="emoji-selection">Emojis</label>
+                                <label htmlFor="emoji-selection">Émojis</label>
                                 <input
                                     type="checkbox"
                                     name="type"

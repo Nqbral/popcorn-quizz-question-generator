@@ -7,7 +7,7 @@ import NavBar from '../components/NavBar';
 import PrimaryButton from '../components/PrimaryButton';
 import SecondaryButton from '../components/SecondaryButton';
 import { URL_JSON_SERVER } from '../constants';
-import { capitalizeWord } from '../helpers/StringHelper';
+import { themeToString, typeQuestionToString } from '../helpers/StringHelper';
 
 export default function ModerateQuestion() {
     const [question, setQuestion] = useState(null);
@@ -91,11 +91,11 @@ export default function ModerateQuestion() {
                                 <h3 className="pt-5 font-bold">
                                     Thème de la question
                                 </h3>
-                                <div>{capitalizeWord(question.theme)}</div>
+                                <div>{themeToString(question.theme)}</div>
                                 <h3 className="pt-5 font-bold">
                                     Type de la question
                                 </h3>
-                                <div>{capitalizeWord(question.type)}</div>
+                                <div>{typeQuestionToString(question.type)}</div>
 
                                 <h3 className="pt-5 font-bold">
                                     Nom de l&apos;oeuvre

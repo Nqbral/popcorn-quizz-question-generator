@@ -107,7 +107,9 @@ export default function CreateQuestion() {
             >
                 <Card>
                     <h2 className="text-yellow-500">Créer la question</h2>
-                    <h3 className="py-3">Chercher l&apos;oeuvre</h3>
+                    <h3 className="py-3">
+                        Chercher l&apos;oeuvre et la sélectionner
+                    </h3>
                     <SearchArtwork
                         theme={theme}
                         handleSelectArtwork={handleSelectArtwork}

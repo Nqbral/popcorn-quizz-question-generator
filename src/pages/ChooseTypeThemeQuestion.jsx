@@ -31,75 +31,85 @@ export default function ChooseTypeThemeQuestion() {
                     <form className="flex flex-col items-center">
                         <h3 className="py-3">Thème</h3>
                         <div>
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="anime"
-                                    onChange={handleChangeForm}
-                                    name="theme"
-                                    checked={questionForm.theme === 'anime'}
-                                    className="mr-1 accent-yellow-500"
-                                />
+                            <input
+                                type="radio"
+                                value="anime"
+                                id="anime-theme"
+                                onChange={handleChangeForm}
+                                name="theme"
+                                checked={questionForm.theme === 'anime'}
+                                className="accent-yellow-500"
+                            />
+                            <label htmlFor="anime-theme" className="mx-1">
                                 Anime
                             </label>
-                            <label className="px-3">
-                                <input
-                                    type="radio"
-                                    value="movie"
-                                    onChange={handleChangeForm}
-                                    name="theme"
-                                    checked={questionForm.theme === 'movie'}
-                                    className="mr-1 accent-yellow-500"
-                                />
+
+                            <input
+                                type="radio"
+                                value="movie"
+                                id="movie-theme"
+                                onChange={handleChangeForm}
+                                name="theme"
+                                checked={questionForm.theme === 'movie'}
+                                className="accent-yellow-500"
+                            />
+                            <label htmlFor="movie-theme" className="mx-1">
                                 Film
                             </label>
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="serie"
-                                    onChange={handleChangeForm}
-                                    name="theme"
-                                    checked={questionForm.theme === 'serie'}
-                                    className="mr-1 accent-yellow-500"
-                                />
+
+                            <input
+                                type="radio"
+                                value="serie"
+                                id="serie-theme"
+                                onChange={handleChangeForm}
+                                name="theme"
+                                checked={questionForm.theme === 'serie'}
+                                className="accent-yellow-500"
+                            />
+                            <label htmlFor="serie-theme" className="mx-1">
                                 Séries
                             </label>
                         </div>
-                        <h3 className="py-3">Type</h3>
+                        <h3 className="mt-3">Type</h3>
                         <div>
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="emoji"
-                                    onChange={handleChangeForm}
-                                    name="type"
-                                    checked={questionForm.type === 'emoji'}
-                                    className="mr-1 accent-yellow-500"
-                                />
-                                Emojis
+                            <input
+                                type="radio"
+                                value="emoji"
+                                id="emoji-type"
+                                onChange={handleChangeForm}
+                                name="type"
+                                checked={questionForm.type === 'emoji'}
+                                className="accent-yellow-500"
+                            />
+                            <label htmlFor="emoji-type" className="mx-1">
+                                Émojis
                             </label>
-                            <label className="px-3">
-                                <input
-                                    type="radio"
-                                    value="image"
-                                    onChange={handleChangeForm}
-                                    name="type"
-                                    checked={questionForm.type === 'image'}
-                                    className="mr-1 accent-yellow-500"
-                                    disabled
-                                />
+
+                            <input
+                                type="radio"
+                                value="image"
+                                id="image-type"
+                                onChange={handleChangeForm}
+                                name="type"
+                                checked={questionForm.type === 'image'}
+                                className="accent-yellow-500"
+                                disabled
+                            />
+                            <label htmlFor="image-type" className="mx-1">
                                 Image
                             </label>
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="music"
-                                    onChange={handleChangeForm}
-                                    name="type"
-                                    checked={questionForm.type === 'music'}
-                                    className="mr-1 accent-yellow-500"
-                                    disabled
-                                />
+
+                            <input
+                                type="radio"
+                                value="music"
+                                id="music-type"
+                                onChange={handleChangeForm}
+                                name="type"
+                                checked={questionForm.type === 'music'}
+                                className="accent-yellow-500"
+                                disabled
+                            />
+                            <label htmlFor="music-type" className="mx-1">
                                 Musique
                             </label>
                         </div>
