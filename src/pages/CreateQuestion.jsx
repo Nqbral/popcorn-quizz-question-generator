@@ -121,7 +121,7 @@ export default function CreateQuestion() {
                             <h3 className="py-3 text-yellow-500">
                                 Oeuvre sélectionnée
                             </h3>
-                            <div className="rounded-lgs border-2 border-solid border-yellow-600 p-2">
+                            <div className="rounded-lg border-2 border-solid border-yellow-600 p-2">
                                 <SelectedArtwork
                                     artwork={artwork}
                                 ></SelectedArtwork>
