@@ -87,8 +87,12 @@ export default function CreateQuestion() {
         let id = 0;
         let data = response.data;
 
+        let dataSorted = data.sort(function (a, b) {
+            return b.id - a.id;
+        });
+
         if (data.length > 0) {
-            id = data.length;
+            id = dataSorted[0].id;
         }
 
         return id;
