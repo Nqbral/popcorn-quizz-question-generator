@@ -37,6 +37,7 @@ export default function EmojiStatements({ handleSetStatement }) {
 
             <EmojiPicker
                 theme={Theme.DARK}
+                searchDisabled={true}
                 previewConfig={configPreview}
                 onEmojiClick={handleAddingEmoji}
             />

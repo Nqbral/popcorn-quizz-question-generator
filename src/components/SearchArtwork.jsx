@@ -26,10 +26,16 @@ export default function SearchArtwork({ theme, handleSelectArtwork }) {
     };
 
     const previousPageChange = () => {
+        if (page === 1) {
+            return;
+        }
         setPage(page - 1);
     };
 
     const nextPageChange = () => {
+        if (page === totalPages) {
+            return;
+        }
         setPage(page + 1);
     };
 
@@ -90,18 +96,18 @@ export default function SearchArtwork({ theme, handleSelectArtwork }) {
 
             {totalPages > 1 ? (
                 <>
-                    <div>
+                    <div className="mt-6">
                         Page {page}/{totalPages}
                     </div>
-                    <div className="flex flex-row items-center justify-center">
+                    <div className="mt-2 flex flex-row items-center justify-center gap-4">
                         <button
-                            className="p-1 font-bold"
+                            className="font-bold text-yellow-500"
                             onClick={previousPageChange}
                         >
                             Précédent
                         </button>
                         <button
-                            className="p-1 font-bold"
+                            className="font-bold text-red-600"
                             onClick={nextPageChange}
                         >
                             Suivant
