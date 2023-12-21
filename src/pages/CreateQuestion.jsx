@@ -70,6 +70,7 @@ export default function CreateQuestion() {
             name: name,
             statement: statement,
             validated: false,
+            poster_path: artwork.poster_path,
         };
 
         await axios.post(URL_JSON_SERVER + 'questions', newQuestion, {

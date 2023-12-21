@@ -9,7 +9,7 @@ export default function Artwork({ artwork, handleSelectArtwork }) {
             }}
         >
             <img
-                src={`https://image.tmdb.org/t/p/original/${artwork.poster_path}`}
+                src={`https://image.tmdb.org/t/p/original${artwork.poster_path}`}
                 className="h-52"
                 alt={`poster-${name}`}
             />

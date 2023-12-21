@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar';
 import PrimaryButton from '../components/PrimaryButton';
 import SecondaryButton from '../components/SecondaryButton';
 import { URL_JSON_SERVER } from '../constants';
+import { capitalizeWord } from '../helpers/StringHelper';
 
 export default function ModerateQuestion() {
     const [question, setQuestion] = useState(null);
@@ -40,6 +41,7 @@ export default function ModerateQuestion() {
                     theme: question.theme,
                     name: question.name,
                     statement: question.statement,
+                    poster_path: question.poster_path,
                     validated: true,
                 },
                 {
@@ -81,14 +83,19 @@ export default function ModerateQuestion() {
                     {question !== null ? (
                         <>
                             <div className="gap-5- flex flex-col items-center">
+                                <img
+                                    src={`https://image.tmdb.org/t/p/original${question.poster_path}`}
+                                    className="mt-5 h-52"
+                                    alt={`poster-${question.name}`}
+                                />
                                 <h3 className="pt-5 font-bold">
                                     Thème de la question
                                 </h3>
-                                <div>{question.theme}</div>
+                                <div>{capitalizeWord(question.theme)}</div>
                                 <h3 className="pt-5 font-bold">
                                     Type de la question
                                 </h3>
-                                <div>{question.type}</div>
+                                <div>{capitalizeWord(question.type)}</div>
 
                                 <h3 className="pt-5 font-bold">
                                     Nom de l&apos;oeuvre

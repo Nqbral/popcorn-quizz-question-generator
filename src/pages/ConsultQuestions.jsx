@@ -36,7 +36,8 @@ export default function ConsultQuestions() {
         let dataFiltered = dataToFilter.filter(
             (question) =>
                 filters.theme.includes(question.theme) &&
-                filters.type.includes(question.type),
+                filters.type.includes(question.type) &&
+                question.validated,
         );
 
         setFilteredData(dataFiltered);
