@@ -10,6 +10,9 @@ export default function EmojiStatements({ handleSetStatement }) {
     const refInputEmoji = useRef();
 
     const handleAddingEmoji = (emojiData) => {
+        if (refInputEmoji.current.value.length > 0) {
+            refInputEmoji.current.value += ' ';
+        }
         refInputEmoji.current.value =
             refInputEmoji.current.value + emojiData.emoji;
 
