@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import ReactLoading from 'react-loading';
 
 import Card from '../components/Card';
 import LinkButton from '../components/LinkButton';
@@ -11,6 +12,7 @@ import { themeToString, typeQuestionToString } from '../helpers/StringHelper';
 
 export default function ModerateQuestion() {
     const [question, setQuestion] = useState(null);
+    const [dataDownloaded, setDataDownloaded] = useState(false);
 
     const fetchData = async () => {
         try {
@@ -22,6 +24,8 @@ export default function ModerateQuestion() {
             if (questionToModerate !== undefined) {
                 setQuestion(questionToModerate);
             }
+
+            setDataDownloaded(true);
         } catch (error) {
             console.error('Error fetch data', error);
         }
@@ -80,9 +84,9 @@ export default function ModerateQuestion() {
             >
                 <Card>
                     <h2 className="text-yellow-500">Modérer une question</h2>
-                    {question !== null ? (
-                        <>
-                            <div className="gap-5- flex flex-col items-center">
+                    {dataDownloaded ? (
+                        question !== null ? (
+                            <>
                                 <img
                                     src={`https://image.tmdb.org/t/p/original${question.poster_path}`}
                                     className="mt-5 h-52"
@@ -105,34 +109,37 @@ export default function ModerateQuestion() {
                                     Énoncé de la question
                                 </h3>
                                 <div>{question.statement}</div>
-                            </div>
-                            <div className="mt-8 flex flex-row flex-wrap justify-center gap-2">
+
+                                <div className="mt-8 flex flex-row flex-wrap justify-center gap-2">
+                                    <LinkButton
+                                        linkTo={'/'}
+                                        buttonText={'Retour'}
+                                        primary={false}
+                                    />
+                                    <SecondaryButton
+                                        buttonText={'Supprimer'}
+                                        onClick={deleteQuestion}
+                                    />
+                                    <PrimaryButton
+                                        buttonText={'Valider'}
+                                        onClick={validateQuestion}
+                                    />
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <div className="my-5 italic">
+                                    Pas de question à modérer
+                                </div>
                                 <LinkButton
                                     linkTo={'/'}
                                     buttonText={'Retour'}
                                     primary={false}
                                 />
-                                <SecondaryButton
-                                    buttonText={'Supprimer'}
-                                    onClick={deleteQuestion}
-                                />
-                                <PrimaryButton
-                                    buttonText={'Valider'}
-                                    onClick={validateQuestion}
-                                />
-                            </div>
-                        </>
+                            </>
+                        )
                     ) : (
-                        <>
-                            <div className="my-5 italic">
-                                Pas de question à modérer
-                            </div>
-                            <LinkButton
-                                linkTo={'/'}
-                                buttonText={'Retour'}
-                                primary={false}
-                            />
-                        </>
+                        <ReactLoading type="spin" color="#eab308" />
                     )}
                 </Card>
             </section>

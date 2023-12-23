@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import ReactLoading from 'react-loading';
 
 import Card from '../components/Card';
 import EmojiQuestionTile from '../components/EmojiQuestionTile';
@@ -150,20 +151,25 @@ export default function ConsultQuestions() {
                             </div>
                         </div>
                     </div>
-                    <div className="my-5 flex flex-row flex-wrap justify-evenly gap-10">
-                        {filteredData.length > 0 ? (
-                            filteredData.map((question) => {
-                                return (
-                                    <EmojiQuestionTile
-                                        key={question.id}
-                                        question={question}
-                                    />
-                                );
-                            })
-                        ) : (
-                            <div className="italic">Pas de résultat</div>
-                        )}
-                    </div>
+                    {dataDownloaded ? (
+                        <div className="my-5 flex flex-row flex-wrap justify-evenly gap-10">
+                            {filteredData.length > 0 ? (
+                                filteredData.map((question) => {
+                                    return (
+                                        <EmojiQuestionTile
+                                            key={question.id}
+                                            question={question}
+                                        />
+                                    );
+                                })
+                            ) : (
+                                <div className="italic">Pas de résultat</div>
+                            )}
+                        </div>
+                    ) : (
+                        <ReactLoading type="spin" color="#eab308" />
+                    )}
+
                     <LinkButton
                         linkTo={'/'}
                         buttonText={'Retour'}
